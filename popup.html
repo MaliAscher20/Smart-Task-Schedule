@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="styles.css">  <!-- Link to CSS file -->
+</head>
+<body>
+  <h1>Task Manager</h1>
+
+  <!-- Form to add tasks -->
+  <form id="task-form">
+    <label for="task">Task:</label>
+    <input type="text" id="task" name="task" required>
+    
+    <label for="time">Time Required (minutes):</label>
+    <input type="number" id="time" name="time" required>
+    
+    <label for="reminder">Reminder (minutes before task):</label>
+    <input type="number" id="reminder" name="reminder" min="0" placeholder="Enter minutes" required>
+    
+    <button type="submit">Add Task</button>
+  </form>
+
+  <!-- Task list -->
+  <h2>Your Tasks:</h2>
+  <ul id="task-list"></ul>
+
+  <!-- Free time input -->
+  <h2>Free Time:</h2>
+  <label for="available-time">Total Free Time (minutes):</label>
+  <input type="number" id="available-time">
+  <button id="calculate">Calculate Schedule</button>
+
+  <!-- Output for schedule calculation -->
+  <div id="schedule-output"></div>
+
+  <script src="popup.js"></script>  <!-- Link to JavaScript file -->
+</body>
+</html>
